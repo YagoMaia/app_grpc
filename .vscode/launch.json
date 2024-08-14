@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GRPC Stub",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["grpc_app.user_client:app", "--reload"],
+      "jinja": true,
+      "justMyCode": false,
+      "envFile": "${workspaceFolder}/.env.desenvolvimento"
+    }
+  ]
+}

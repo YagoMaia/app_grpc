@@ -1,0 +1,46 @@
+message User {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+  }
+  
+  message NewUserRequest {
+    string name = 2;
+    string email = 3;
+  }
+  
+  message NewUserResponse {
+    bool created = 1;
+  } 
+  
+  message GetUserRequest {
+    int32 id = 1;
+  }
+  
+  message GetUserResponse {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+  }
+  
+  message ListUsersRequest {}
+  
+  message ListUsersResponse {
+    repeated User users = 1;
+  }
+  
+  message DeleteRequest {
+    int32 id = 1;
+  }
+  
+  message DeleteResponse {
+    bool deleted = 1;
+  }
+  
+  message UpdateRequest {
+    User user = 1;
+  }
+  
+  message UpdateResponse {
+    bool updated = 1;
+  }
