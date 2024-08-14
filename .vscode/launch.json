@@ -2,14 +2,34 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python Debugger: Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "grpc_app\\app.py",
+        "FLASK_DEBUG": "1"
+      },
+      "args": [
+        "run",
+        "--no-debugger",
+        "--reload"
+      ],
+      "jinja": true,
+      "autoStartBrowser": false
+    },
+    {
       "name": "GRPC Stub",
       "type": "debugpy",
       "request": "launch",
       "module": "uvicorn",
-      "args": ["grpc_app.user_client:app", "--reload"],
+      "args": [
+        "grpc_app.user_client:app",
+        "--reload"
+      ],
       "jinja": true,
       "justMyCode": false,
       "envFile": "${workspaceFolder}/.env.desenvolvimento"
-    }
+    },
   ]
 }

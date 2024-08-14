@@ -1,9 +1,9 @@
-from flask import Flask, From
-from deps import grpc_stub_dependency
+from flask import Flask
+from .deps import grpc_stub_dependency
 from .grpc_generated.users_pb2 import *
 from .grpc_generated.users_pb2_grpc import *
 from google.protobuf.json_format import MessageToDict
-from schemas import *
+from .schemas import *
 
 app = Flask(__name__)
 
